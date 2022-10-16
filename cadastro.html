@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro do texto</title>
+        <link rel="stylesheet" href="Asserts/main.css">
+        <script src="Asserts/JS/main.js"></script>
+    </head>
+    <body>
+        <h2 style=" font-size: 400%; margin-left: 40%;" >Dealership</h2>
+        <div class="menu">
+            <a href="menu.html">
+                <span>Voltar para o Menu</span>
+            </a> 
+            <a href="cadastro.html">
+                <span>Inserir novo Texto</span>
+            </a>         
+        </div>
+        <div class="forms">
+            
+            <label>Texto para iniciar cadastro da concessionária: </label> <input type="text" placeholder="Digite seu texto..." name = "texto">
+            <a href="consultar.html">
+                <button onclick="">Cadastrar</button>
+            </a>
+            <a href="cadastro.html">
+                <button onclick="rest()">Limpar Cadastro</button>
+            </a>
+        </div>
+        <div class="footer">
+            <h3>Todos os direitos protegidos</h3>
+        </div>
+        <script>           
+            function rest(){
+                alert("Campos limpos com Sucesso");               
+            }
+        </script>
+    </body>
+</html>

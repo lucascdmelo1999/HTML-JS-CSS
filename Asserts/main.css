@@ -1,0 +1,65 @@
+body {
+    background-color: white;
+    background: linear-gradient(rgba(235, 229, 229, 0.959), rgb(237, 234, 234)100%), url("https://image.webmotors.com.br/_fotos/AnuncioUsados/gigante/2022/202210/20221006/FERRARI-PORTOFINO-3.9-V8-TURBO-GASOLINA-T-F1DCT-wmimagem13174927034.jpg");
+} 
+
+.footer{
+    border-radius: 5px;
+    background: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-size: cover;
+    height: 220px;
+}
+
+.footer h3{
+    margin-top: 100px;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+.foto{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-size: cover;
+    align-items: flex-end;
+}
+
+.foto img{
+    margin-left: 100px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    height: 30px;
+   
+}
+.menu a{
+    color: white;
+    background: gray;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 100px;
+    width: 120px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.forms{
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forms input{
+    margin-bottom: 20px;
+}
+
+.forms button{
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
