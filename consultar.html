@@ -22,14 +22,47 @@
             </a>         
         </div>
         <div class="forms">
-            <a href="alterar.html">
-                <button onclick="form2()">Editar</button>
-            </a>
-            <textarea name = "resultado" cols="30" rows="10"></textarea>  
+            
+            <button onclick="calledit()">Editar</button>
+            
+            <span name = "resultado"></span> 
 
         </div>
         <div class="footer">
             <h3>Todos os direitos protegidos</h3>
         </div>
+        <script>
+            function calledit(){
+                var passaValor = function(valor){
+                    window.location = "alterar.html?minhaVariavel="+valor;
+                }
+    
+                passaValor(param_value);
+            }
+            
+            var parameter;
+            var param_value = false;  
+            resut = document.getElementsByName("resultado")[0];
+
+            function queryString(parameter) {  
+                var loc = location.search.substring(1, location.search.length);   
+                 
+                var params = loc.split("&");   
+                for (i=0; i<params.length;i++) {   
+                    param_name = params[i].substring(0,params[i].indexOf('='));   
+                    if (param_name == parameter) {                                          
+                        param_value = params[i].substring(params[i].indexOf('=')+1).replace("%20"," ");  
+                    }   
+                }   
+                if (param_value) {
+                    resut.innerHTML = param_value;      
+                }   
+                else { 
+                    resut.innerHTML = "Não possiu lista";  
+                }   
+            }
+            var prt = queryString("minhaVariavel");
+            
+        </script>
     </body>
 </html>

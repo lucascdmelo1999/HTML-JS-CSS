@@ -55,6 +55,10 @@ body {
     align-items: center;
 }
 
+.forms span{
+    font-size: 50px;
+}
+
 .forms input{
     margin-bottom: 20px;
 }
