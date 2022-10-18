@@ -17,7 +17,7 @@
             <a href="cadastro.html">
                 <span>Inserir novo Texto</span>
             </a>         
-            <a href="deletar.html">
+            <a onclick="delet()">
                 <span>Deletar Texto</span>
             </a>         
         </div>
@@ -39,7 +39,15 @@
     
                 passaValor(param_value);
             }
-            
+
+            function delet(){
+                var passaValor = function(valor){
+                    window.location = "deletar.html?minhaVariavel="+valor;
+                }
+    
+                passaValor(param_value);
+            }
+
             var parameter;
             var param_value = false;  
             resut = document.getElementsByName("resultado")[0];
@@ -53,7 +61,10 @@
                     if (param_name == parameter) {                                          
                         param_value = params[i].substring(params[i].indexOf('=')+1).replace("%20"," ");  
                     }   
-                }   
+                } 
+                for(c=0; c< param_value.length; c++){
+                    param_value = param_value.replace("%20", " ");
+                }  
                 if (param_value) {
                     resut.innerHTML = param_value;      
                 }   

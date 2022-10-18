@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Deletar Texto</title>
+        <link rel="stylesheet" href="Asserts/main.css">
+        <script src="Asserts/JS/main.js"></script>
+    </head>
+    <body>
+        <h2 style=" font-size: 400%; margin-left: 40%;" >Dealership</h2>
+        <div class="menu">
+            <a href="menu.html">
+                <span>Voltar para o Menu</span>
+            </a> 
+            <a href="cadastro.html">
+                <span>Inserir novo Texto</span>
+            </a>         
+        </div>
+        <div class="forms">
+
+            <a href="deletar.html">
+                <button>Deletar</button>
+            </a>
+            
+            <span name = "resultado"></span>
+
+        </div>
+        <div class="footer">
+            <h3>Todos os direitos protegidos</h3>
+        </div>
+        <script>
+            
+            var parameter;
+            var param_value = false;
+            resut = document.getElementsByName("resultado")[0];
+
+            function queryString(parameter) {  
+                var loc = location.search.substring(1, location.search.length);      
+                var params = loc.split("&");   
+                for (i=0; i<params.length;i++) {   
+                    param_name = params[i].substring(0,params[i].indexOf('='));   
+                    if (param_name == parameter) {                                          
+                        param_value = params[i].substring(params[i].indexOf('=')+1).replace("%20"," ");   
+                    }   
+                } 
+                for(c=0; c< param_value.length; c++){
+                    param_value = param_value.replace("%20", " ");
+                }
+                if (param_value) {
+                    resut.innerHTML = param_value;      
+                }   
+                else { 
+                    resut.innerHTML = "Item deletado"; 
+                }   
+            }
+            var prt = queryString("minhaVariavel");
+
+        </script>
+    </body>
 </html>
